@@ -42,14 +42,10 @@ export default function ChatCreator({ navigation }) {
           text: `${roomName} created`,
           createdAt: new Date().getTime(),
           system: true,
-          fromUser: {
-            _id: "TEST_USER_ID_1",
-            displayName: "TEST_1",
-          },
-          toUser: {
-            _id: "TEST_USER_ID_2",
-            displayName: "TEST_2",
-          },
+          users: [
+            { _id: "TEST_USER_ID_1", displayName: "TEST_1" },
+            { _id: "TEST_USER_ID_1", displayName: "TEST_1" },
+          ],
         }
       );
       navigation.navigate("ChatList");

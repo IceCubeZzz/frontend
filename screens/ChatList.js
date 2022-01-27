@@ -66,7 +66,9 @@ export default function ChatList({ navigation }) {
             <View style={styles.row}>
               <View style={styles.content}>
                 <View style={styles.header}>
-                  <Text style={styles.nameText}>{item.text}</Text>
+                  <Text style={styles.nameText}>
+                    {item.users[0]["displayName"]}
+                  </Text>
                 </View>
                 <Text style={styles.contentText}>
                   {item.latestMessage.text.slice(0, 90)}
